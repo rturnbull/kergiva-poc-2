@@ -1,0 +1,186 @@
+
+
+
+header{
+  background-color: #ffba00;
+  opacity: 1;
+  height:1.75em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 1.75em;
+  color: #123447;
+  text-align: center;
+  vertical-align: center;
+  padding-top: .5em;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
+  border-radius: 5px;
+
+}
+subheader {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 1.25em;
+  color: #123447;
+  text-align: left;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-bottom: .5em;
+
+}
+.header-img {
+  width: 47px;
+  float: left;
+}
+
+
+/********************************************************************************
+  The log in page logo
+*/
+.main-logo {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 1.25em;
+  color: #123447;
+  text-align: left;
+  padding-top: 13em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+
+
+}
+.main-logo-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+ 
+  
+}
+/********************************************************************************/
+
+
+
+
+footer {
+  -position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #ffba00;
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: .5em;
+  color: #123447;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-bottom: .5em;
+}
+
+.container{
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+form{
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 1em;
+  
+}
+
+.label{
+  display: block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+  input{
+    display: block;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 1em;
+    color: #123447;
+    border: 1px solid powderblue;
+    border-radius: 10px;
+    height: 1em;
+    min-width: 75%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+  ::placeholder {
+    color: lightgrey;
+  }
+
+  select{
+    display: block;
+    min-width: 50%;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 1em;
+    color: #123447;
+    border: 1px solid powderblue;
+    border-radius: 10px;
+    height: 2.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+  
+  }
+  button {
+    background-color: #BBA3E3;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 1em;
+    height: 2em;
+    border: 1px solid #7251A8;
+    border-radius: 5px;
+    min-width: 5em;
+
+  }
+  button:hover {
+    background-color: #9677c9; /* Green */
+  }
+  disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+/*
+
+*/
+.list-item {
+  display: block;
+  min-width: 50%;
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: .75em;
+  color: #123447;
+  height: 3.5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+@media only screen and (min-width: 768px) {
+  
+
+}
