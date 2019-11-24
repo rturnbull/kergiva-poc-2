@@ -184,7 +184,8 @@ function appointmentPageLoad(){
     } else {
         var btn = document.getElementById("button1");
         if (localStorage.getItem("questionPrep") == undefined) {
-
+            
+            //comment to trigger git add
             btn.innerHTML = "Reason for visit...";
         } 
         document.getElementById("reason").style.display="none";   
