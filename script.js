@@ -11,7 +11,17 @@ function appointmentPrepFormLoad(){
 
 // called when a chief complaint is selected in the 'appontmentprep' page 
 function showForm(a){
-    document.getElementById("pain_form").style.display="block";
+            //the demo quesitons make sense only with the "pain" complaint. 
+
+            var elem = document.getElementById("select1");
+            var usertext = elem.options[elem.selectedIndex].text;
+
+            if (usertext != "Pain") {
+                alert('The demo works only when you select "Pain" as the complaint');
+            } else {
+                document.getElementById("pain_form").style.display="block";
+            }
+    
 } 
 
 function showAppointmentPrep(){
@@ -125,9 +135,7 @@ function loadPrep() {
             //expecting this to be a reference ot the html <input> or <select>
             var elem = document.getElementById(q.elementId);
 
-            // TODO: if is select...
-            // set the option that was selected for the element
-            
+            // if is select, set the option that was selected for the element
             if (elem.nodeName=="SELECT"){
                 elem.options.selectedOptionIndex = q.selectedOptionIndex;
                 elem.options[q.selectedOptionIndex].selected = "selected";    
@@ -155,6 +163,7 @@ function deleteAppointmentPrep(){
  * APPOINTMENT PAGE
  */
 function showAppointment(){
+    
     window.location.href = "appointment.html";
 }
 
@@ -165,10 +174,19 @@ function appointmentPageLoad(){
         
         var prep = JSON.parse(localStorage.getItem("questionPrep"));
         var locus = prep[1].locus; //the second drop-down on the page and in the array
+        //HACK to handle location not chosen
+        if(locus == "Please choose..."){
+            locus = "Pain"
+        }
         var reasonForVisit = document.getElementById("reason");
         reasonForVisit.innerHTML = "Reason for visit: " + locus;
         document.getElementById("reason").style.display="block";   
     } else {
+        var btn = document.getElementById("button1");
+        if (localStorage.getItem("questionPrep") == undefined) {
+
+            btn.innerHTML = "Choose reason for visit...";
+        } 
         document.getElementById("reason").style.display="none";   
     }
 
