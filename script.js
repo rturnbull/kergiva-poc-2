@@ -185,7 +185,7 @@ function appointmentPageLoad(){
         var btn = document.getElementById("button1");
         if (localStorage.getItem("questionPrep") == undefined) {
 
-            btn.innerHTML = "Choose reason for visit...";
+            btn.innerHTML = "Reason for visit...";
         } 
         document.getElementById("reason").style.display="none";   
     }
