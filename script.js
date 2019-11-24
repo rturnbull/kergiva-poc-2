@@ -189,5 +189,5 @@ function appointmentPageLoad(){
         } 
         document.getElementById("reason").style.display="none";   
     }
-
+ 
 }
