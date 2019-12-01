@@ -1,6 +1,6 @@
 
 * {
-  font-size: 14pt;
+  font-size: 13pt;
 }
 
 .kg-icon {
@@ -59,12 +59,13 @@
 
 .kg-centered {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 
 /**
-  Text styles
+  Text & text container styles
 */
 .kg-text-container {
   display: inline-block;
@@ -84,12 +85,11 @@
 
 header{
   background-image: url("bg-pattern.png");
-  -background-color: #ffba00;
+  background-size: 35px;
   background-color: #c58f00;
   filter: contrast(200%) hue-rotate(0deg);
 
-  opacity: .8;
-  --height:1em;
+  opacity: 1;
   font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 2em;
   color: #123447;
@@ -108,7 +108,7 @@ header{
 subheader {
   display: block;
   font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 1.25em;
+  font-size: 1em;
   color: #123447;
   text-align: left;
   padding-top: .5em;

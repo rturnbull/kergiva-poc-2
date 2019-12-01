@@ -1,21 +1,25 @@
 /* Style the navbar */
 #navbar {
     overflow: hidden;
-    -background-color: #ffba00;
     background-color: #FFE9B0;
     border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
   }
   
   /* Navbar links */
   #navbar a {
-    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 1em;
+    font-family: 'Muli', sans-serif; 
+    font-size: .85em;
     float: left;
     display: block;
     color: #123447;
     text-align: center;
-    padding: 1em;
+    padding: .25em;
     text-decoration: none;
   }
   
