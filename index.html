@@ -8,12 +8,14 @@
         <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="modalform.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300&display=swap" >
+        <script src="script.js"></script>
         <script src="modalform.js"></script>
     </head>
     
     
-    <body onLoad="showModal()">
+    <body onLoad="">
         <header>
             <a href=index.html>
                 <img class="header-img" src="kergiva-logo-image&text-transparent.png" alt="" >
@@ -26,13 +28,21 @@
             <a href="#appointments">Appointments</a>
             <a href="#family">Family</a>
         </div>
-
+        <span class="kg-text-container kg-intro">
+            Kērgiva is an app that helps patients get more from their visits to the doctor, 
+            by giving them tools to retain information. It helps prepare before the visit, 
+            participate actively during the visit, and finally, digest, use and share
+            information after the visit.
+        </span>
 
         <!-- Logo -->
         <div class="!container main-logo">
             <img class="main-logo-img" src="kergiva-logo-image&text-transparent.png" alt="" >    
         </div>
 
+        <div class="group-on form-font kg-centered">
+            <button id="loginBtn" class="" type="button" onclick="showLoginModal()">Log in...</button>
+        </div>
 
 
 
@@ -41,12 +51,13 @@
         <div id="login-form" class="modal">
             <!-- Modal content -->
             <form class="modal-content">
-              <span class="close">&times;</span>
+              <span class="close">&times;</span><br>
+
               <label>Email Address</label>
-              <input placeholder="Email address">
+              <input class="form-font form-input-text" placeholder="Email address">
               <p></p>
               <label>Password</label>
-              <input placeholder="Password">
+              <input class="form-font form-input-text"  placeholder="Password">
               <p></p>
               <button id="login-btn" type="button">Log in</button>    
 

@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        <script src="script.js"></script>
-        <script src="script.js"></script> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300&display=swap">
+        <script src="script.js"></script>
     </head>
     
     
@@ -29,137 +30,136 @@
 
         <subheader>
             <img src="img/suzy.jpg" width="100" alt="Familty member"><p></p>
-            <i class="fas fa-user-md"></i> Dr. Jay Patel <p>
-            <i class="fas fa-calendar-day"></i> Saturday, December 13, 2019.
+            <i class="fas fa-user-md rspacer"></i> Dr. Jay Patel <p>
+            <i class="fas fa-calendar-day rspacer"></i> Saturday, December 13, 2019.
             <hr>
             <p>
         </subheader>
 
         <form class="!container">
-            <div class=my-input-group>
-
-                <!-- selects start here -->
-                <label id="label1" class="label" for="select1">What is the main complaint? Why are you visiting the doctor?</label>
-                <select id="select1" questionId="Chief Complaint" onChange="showForm(1)">
-                    <option value="-1">Please choose...</option>
-                    <option value="0">Rash</option>
-                    <option value="1">Pain</option>
-                    <option value="2">Lump</option>
-                    <option value="3">Trouble breathing</option>
-                </select>
-                <p></p>
-            </div>
+            <!-- selects start here -->
+            <label id="label1" class="label" for="select1">What is the main complaint? Why are you visiting the doctor?</label>
+            <select id="select1" class="form-font form-input" questionId="Chief Complaint" onChange="showForm(1)">
+                <option value="-1">Please choose...</option>
+                <option value="0">Rash</option>
+                <option value="1">Pain</option>
+                <option value="2">Lump</option>
+                <option value="3">Trouble breathing</option>
+            </select>
+            <p></p>
         </form>
 
         <form id="pain_form" class="!container">
-            <label id="label2" "class="label" for="select2">Where is the pain?</label>
-            <select id="select2" questionId="locus">
-                <option value="-1">Please choose...</option>
-                <option value="0">Abdominal pain</option>
-                <option value="1">Chest pain</option>
-                <option value="2">Foot pain</option>
-                <option value="3">Headache</option>
-                <option value="4">Hip pain</option>
-                <option value="5">Knee pain</option>
-                <option value="6">Low back pain</option>
-                <option value="7">Pain in the pelvis</option>
-                <option value="8">Ankle pain</option>
-                <option value="9">Shoulder pain</option>
-                <option value="10">Sore throat</option>
-                <option value="11">Neck pain</option>                
-            </select>
-
-            <p>
-            <label id="label3" class="label" for="select3">How would you characterize the pain?</label>
-            <select id="select3" questionId="Characterization">
-                <option value="-1">Please choose...</option>
-                <option value="0">aching</option>
-                <option value="1">burning</option>
-                <option value="2">cramping</option>
-                <option value="3">crushing</option>
-                <option value="4">cutting</option>
-                <option value="5">dull</option>
-                <option value="6">gnawing</option>
-                <option value="7">hot</option>
-                <option value="8">nauseating</option>
-                <option value="9">sharp</option>
-                <option value="10">shooting</option>
-                <option value="11">smarting</option>
-                <option value="12">splitting</option>
-                <option value="13">stabbing</option>
-                <option value="14">stretching</option>
-                <option value="15">throbbing</option>
-                <option value="16">twisting</option>
-                </select>
-
-                <p>                
-                <label id="label4" class="label" for="select4">How severe is the pain?</label>
-                <select id="select4" questionId="Severity">
+            <!--div class="form-font form-input"-->
+                <label id="label2" class="label" for="select2">Where is the pain?</label>
+                <select id="select2" class="form-font form-input" questionId="locus">
                     <option value="-1">Please choose...</option>
-                    <option value="0">severe</option>
-                    <option value="1">moderate</option>
-                    <option value="2">mild</option>
+                    <option value="0">Abdominal pain</option>
+                    <option value="1">Chest pain</option>
+                    <option value="2">Foot pain</option>
+                    <option value="3">Headache</option>
+                    <option value="4">Hip pain</option>
+                    <option value="5">Knee pain</option>
+                    <option value="6">Low back pain</option>
+                    <option value="7">Pain in the pelvis</option>
+                    <option value="8">Ankle pain</option>
+                    <option value="9">Shoulder pain</option>
+                    <option value="10">Sore throat</option>
+                    <option value="11">Neck pain</option>                
                 </select>
 
-                <!-- selects END here -->
+                <p>
+                <label id="label3" class="label" for="select3">How would you characterize the pain?</label>
+                <select id="select3" class="form-font form-input" questionId="Characterization">
+                    <option value="-1">Please choose...</option>
+                    <option value="0">aching</option>
+                    <option value="1">burning</option>
+                    <option value="2">cramping</option>
+                    <option value="3">crushing</option>
+                    <option value="4">cutting</option>
+                    <option value="5">dull</option>
+                    <option value="6">gnawing</option>
+                    <option value="7">hot</option>
+                    <option value="8">nauseating</option>
+                    <option value="9">sharp</option>
+                    <option value="10">shooting</option>
+                    <option value="11">smarting</option>
+                    <option value="12">splitting</option>
+                    <option value="13">stabbing</option>
+                    <option value="14">stretching</option>
+                    <option value="15">throbbing</option>
+                    <option value="16">twisting</option>
+                    </select>
 
+                    <p>                
+                    <label id="label4" class="label" for="select4">How severe is the pain?</label>
+                    <select id="select4" class="form-font form-input" questionId="Severity">
+                        <option value="-1">Please choose...</option>
+                        <option value="0">severe</option>
+                        <option value="1">moderate</option>
+                        <option value="2">mild</option>
+                    </select>
 
-                <p>
-                <label class="label" for="input1">Are you ever awakened by pain? If so, how often?</label>
-                <input id="input1"/>     
+                    <!-- selects END here -->
 
-                <p>
-                <label class="label" for="input2">Is it sudden or gradual?</label>
-                <input id="input2"/>    
-                
-                <p>
-                <label for="input3" class="label">How long does it usually last?</label>
-                <input id="input3"/>
+<div class="">
+                    <p>
+                    <label class="label" for="input1">Are you ever awakened by pain? If so, how often?</label>
+                    <input id="input1" class="form-font form-input-text"/>     
 
-                <p>
-                <label for="input4" class="label">How often does the pain occur: Hourly? Daily? Weekly? Monthly?</label>
-                <input id="input4"/>       
+                    <p>
+                    <label class="label" for="input2">Is it sudden or gradual?</label>
+                    <input id="input2"/>    
+                    
+                    <p>
+                    <label for="input3" class="label">How long does it usually last?</label>
+                    <input id="input3" class="form-font form-input-text"/>
 
-                <p>
-                <label for="input5" class="label">When do you usually experience it: Daytime? Nighttime? Early morning?</label>
-                <input id="input5"/>                                                
+                    <p>
+                    <label for="input4" class="label">How often does the pain occur: Hourly? Daily? Weekly? Monthly?</label>
+                    <input id="input4" class="form-font form-input-text"/>       
 
-                <p>
-                <label for="input6" class="label">When did you first notice it?</label>
-                <input id="input6"/>
+                    <p>
+                    <label for="input5" class="label">When do you usually experience it: Daytime? Nighttime? Early morning?</label>
+                    <input id="input5" class="form-font form-input-text"/>                                                
 
-                <p>
-                <label for="input7" class="label">What were you doing when you first noticed it?</label>
-                <input id="input7"/>
+                    <p>
+                    <label for="input6" class="label">When did you first notice it?</label>
+                    <input id="input6" class="form-font form-input-text"/>
 
-                <p>
-                <label for="input8" class="label">Does it ever occur before, during or after meals?</label>
-                <input id="input8"/>        
+                    <p>
+                    <label for="input7" class="label">What were you doing when you first noticed it?</label>
+                    <input id="input7" class="form-font form-input-text"/>
 
-                <p>
-                <label for="input9" class="label">Does the pain occur seasonally?</label>
-                <input id="input9"/>        
+                    <p>
+                    <label for="input8" class="label">Does it ever occur before, during or after meals?</label>
+                    <input id="input8" class="form-font form-input-text"/>        
 
-                <p>
-                <label for="input10" class="label">Does it lead to anything else?</label>
-                <input id="input10"/>
-                
-                <p>
+                    <p>
+                    <label for="input9" class="label">Does the pain occur seasonally?</label>
+                    <input id="input9" class="form-font form-input-text"/>        
+
+                    <p>
+                    <label for="input10" class="label">Does it lead to anything else?</label>
+                    <input id="input10" class="form-font form-input-text"/>
+                    
+                    <p>
                     <label for="input11" class="label">Does anything you do make it better?</label>
-                    <input id="input11"/>
-                
-                <p>
-                <label for="input12" class="label">Is it accompanied by other signs and symptoms?</label>
-                <input id="input12"/>
+                    <input id="input11" class="form-font form-input-text"/>
+                    
+                    <p>
+                    <label for="input12" class="label">Is it accompanied by other signs and symptoms?</label>
+                    <input id="input12" class="form-font form-input-text"/>
+
+                    <p>
+                    <label for="input13" class="label">What do you think is causing your symptoms? Are you worried about something in particular?</label>
+                    <input id="input13" class="form-font form-input-text"/>
+                                            
 
                 <p>
-                <label for="input13" class="label">What do you think is causing your symptoms? Are you worried about something in particular?</label>
-                <input id="input13"/>
-                                           
-
-            <p>
-            <button type="button" onclick="savePrep(); showAppointment()">Ok</button>    
-            
+                <button type="button" onclick="savePrep(); showAppointment()">Ok</button>    
+        
+            </div>
         </form>
         <p>
             <br>

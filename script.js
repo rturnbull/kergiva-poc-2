@@ -1,36 +1,20 @@
 
-// the 'appoinmentprep' page calls this when the body loads 
-function appointmentPrepFormLoad(){
-    var prep = JSON.parse(localStorage.getItem("questionPrep"));
-    if (prep == undefined){
-        document.getElementById("pain_form").style.display="none";
-    } else {
-        loadPrep();
-    }
-}
 
 // called when a chief complaint is selected in the 'appontmentprep' page 
-function showForm(a){
+function showDemoAlert(){
             //the demo quesitons make sense only with the "pain" complaint. 
-
             var elem = document.getElementById("select1");
             var usertext = elem.options[elem.selectedIndex].text;
-
             if (usertext != "Pain") {
                 alert('The demo works only when you select "Pain" as the complaint');
-            } else {
-                document.getElementById("pain_form").style.display="block";
-            }
-    
+            } 
 } 
 
-function showAppointmentPrep(){
-    window.location.href = "appointmentprep.html";
-}
-
-
-
-//stores Q&A data as Json objects in a strigified array in localStorage
+/********************************************************************************
+    scrapes questions and answers from the appoinment prep modal 
+    and stores Q&A data as Json objects in a strigified array in 
+    localStorage
+ ********************************************************************************/
 function savePrep() {
 
     // array of questions & answers 
@@ -101,13 +85,10 @@ function savePrep() {
         if (thisanswer.trim() != ""){
             prep.push(qJson);
         }
-        //prep.push(qJson);
     }
 
     localStorage.setItem("questionPrep", JSON.stringify(prep));
-    //alert(JSON.stringify(prep)); 
     
-
 }
 
 /********************************************************************************
@@ -120,11 +101,9 @@ function loadPrep() {
     // if the questions have been answered, bring them back for editing 
     var prep = JSON.parse(localStorage.getItem("questionPrep"));
 
-
     if (prep != undefined){
         
         console.log(JSON.stringify(prep));
-
 
         //populate the answers
         for(var i = 0; i < prep.length; i++){
@@ -143,20 +122,8 @@ function loadPrep() {
                 elem.value = q.answer;
             }
         }
-            //show the whole Q&A list
-            showForm(1);
     }
 }
-
-function appoinmentPrepIsAvailable(){
-    var b = localStorage.getItem("questionPrep") != undefined;
-    return b; 
-}
-
-function deleteAppointmentPrep(){
-    localStorage.removeItem("questionPrep");
-}
-
 
 
 /*
@@ -164,31 +131,17 @@ function deleteAppointmentPrep(){
  */
 function showAppointment(){
     
-    window.location.href = "appointment.html";
-}
-
-//If there is Q&A data (TODO: *and* the chief complaint has been selected), show the reason for visit 
-function appointmentPageLoad(){
-    var b  = appoinmentPrepIsAvailable();
-    if (b) {
-        
-        var prep = JSON.parse(localStorage.getItem("questionPrep"));
-        var locus = prep[1].locus; //the second drop-down on the page and in the array
-        //HACK to handle location not chosen
-        if(locus == "Please choose..."){
-            locus = "Pain"
-        }
-        var reasonForVisit = document.getElementById("reason");
-        reasonForVisit.innerHTML = "Reason for visit: " + locus;
-        document.getElementById("reason").style.display="block";   
-    } else {
-        var btn = document.getElementById("button1");
-        if (localStorage.getItem("questionPrep") == undefined) {
-            
-            //comment to trigger git add
-            btn.innerHTML = "Reason for visit...";
-        } 
-        document.getElementById("reason").style.display="none";   
+    //if appointmentReason has been selected, display it on the "which?" page
+    var appointmentReason = localStorage.getItem("appointmentPrep.appointmentReason");
+    if (appointmentReason != undefined){
+        document.getElementById("reason").innerHTML=" <i class='fas fa-diagnoses rspacer'></i>" + appointmentReason;
+        //change the button text to "Change"
+        document.getElementById("selectBtn").innerHTML="Change";
     }
- 
+    //kill the modal
+    document.getElementById("prepModal").style.display = "none";
+    //reset the current question in localStorage
+    localStorage.setItem("appointmentPrep.currentQuestionId","1");
+
 }
+ 

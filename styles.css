@@ -1,25 +1,113 @@
 
+* {
+  font-size: 14pt;
+}
+
+.kg-icon {
+  color: #3b47b5;
+}
+
+/*
+  Form styles
+*/
+.form-font {
+  font-family: 'Muli', sans-serif; 
+  font-size: 1em;
+  color: #123447;
+  text-align: left;
+}
+
+.form-input {
+  display: inline-block;
+  min-width: 75%;
+  background-color: #fff;
+  border: .5px solid lightblue;
+  border-radius: 5px;
+  
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  height: 2.5em;
+}
+
+.form-input-text {
+  height: 1.5em;
+  display: inline-block;
+  min-width: 75%;
+  background-color: #fff;
+  border: .5px solid powderblue;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+
+}
+
+.group {
+  display: none;
+}
+
+.group-on {
+  display: inline-block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.kg-centered {
+  display: flex;
+  justify-content: center;
+}
+
+
+/**
+  Text styles
+*/
+.kg-text-container {
+  display: inline-block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  align-content: center;
+}
+.kg-intro {
+  font-family: 'Muli', sans-serif; 
+  font-size: 1em;
+  color: #123447;
+  text-align: center;
+}
 
 
 header{
-  background-color: #ffba00;
-  opacity: 1;
-  height:1.75em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 1.75em;
+  background-image: url("bg-pattern.png");
+  -background-color: #ffba00;
+  background-color: #c58f00;
+  filter: contrast(200%) hue-rotate(0deg);
+
+  opacity: .8;
+  --height:1em;
+  font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 2em;
   color: #123447;
+
   text-align: center;
   vertical-align: center;
+  
   padding-top: .5em;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   padding-left: .5em;
   padding-right: .5em;
+  
   border-radius: 5px;
 
 }
 subheader {
   display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 1.25em;
   color: #123447;
   text-align: left;
@@ -41,11 +129,11 @@ subheader {
 */
 .main-logo {
   display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 1.25em;
   color: #123447;
   text-align: left;
-  padding-top: 13em;
+  padding-top: 0em;
   padding-bottom: .5em;
   padding-left: 2em;
   padding-right: 2em;
@@ -73,7 +161,7 @@ footer {
   bottom: 0;
   background-color: #ffba00;
   display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: .5em;
   color: #123447;
   text-align: center;
@@ -95,70 +183,46 @@ footer {
   padding-right: .5em;
 }
 
-form{
-  background-color: #fff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 1em;
-  
-}
-
 .label{
+  font-family: inherit;
   display: block;
   padding-top: .5em;
   padding-bottom: .5em;
   padding-left: .5em;
   padding-right: .5em;
 }
-  input{
-    display: block;
-    background-color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 1em;
-    color: #123447;
-    border: 1px solid powderblue;
-    border-radius: 10px;
-    height: 1em;
-    min-width: 75%;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
-  }
+
   ::placeholder {
     color: lightgrey;
   }
 
-  select{
-    display: block;
-    min-width: 50%;
-    background-color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 1em;
-    color: #123447;
-    border: 1px solid powderblue;
-    border-radius: 10px;
-    height: 2.5em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
-  
+  option {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
   }
+
   button {
+    display: inline-block;
     background-color: #BBA3E3;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    /*
+    font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
-    height: 2em;
+    */
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+
+    height: 1.75em;
     border: 1px solid #7251A8;
     border-radius: 5px;
-    min-width: 5em;
+    min-width: 3em;
 
   }
   button:hover {
     background-color: #9677c9; /* Green */
   }
-  disabled {
+  :disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -170,7 +234,7 @@ form{
   display: inline-block;
   min-width: 75%;
   background-color: #fff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: 'Muli', Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 1em;
   color: #123447;
   height: 6em;
@@ -190,6 +254,14 @@ a:link {
 a:hover {
   cursor:pointer;
  }
+
+ .rspacer{
+  padding-right: .5em;
+ }
+
+
+
+
 @media only screen and (min-width: 768px) {
 
 }

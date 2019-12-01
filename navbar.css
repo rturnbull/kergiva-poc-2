@@ -9,9 +9,9 @@
   
   /* Navbar links */
   #navbar a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif; 
     font-size: 1em;
-    float: right;
+    float: left;
     display: block;
     color: #123447;
     text-align: center;
