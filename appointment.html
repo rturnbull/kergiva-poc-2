@@ -37,10 +37,10 @@
 
 
             <span id="reason">
-                <i class="fas fa-diagnoses kg-icon rspacer"></i>Prepare...
+                <i class="fas fa-diagnoses kg-icon rspacer"></i>Symptoms...</i>
             </span>
             <div class="group-on">
-                <button id="selectBtn" class="" type="button" onclick="showPrepModal()">Select...</button>
+                <button id="selectBtn" class="" type="button" onclick="showPrepModal()"><i class="fas fa-edit"></i></button>
                 <!-- button id="clearBtn" class="" type="button" onclick="clearPrepCache()">Clear</button -->
             </div>
 
@@ -48,18 +48,24 @@
             <i class="fas fa-map-marker-alt kg-icon rspacer"></i>
             233 S Wacker Dr, Chicago, IL 60606
             <p>
-                <button id="button2" type="button">Map...</button>
+                <button id="button2" type="button"><i class="fas fa-map-marked-alt"></i></button>
             </p>
         </subheader>
 
 
 <!-- appointment prep modal begins here -->
     <div id="prepModal" class="modal">
-        <div class="modal-content form-font">
-            <span id="span1" class="modal-header">
-                <i class="fas fa-diagnoses kg-icon rspacer"></i>Pain
-            </span>
-            <span id="closex" class="close">&times;</span><br><hr>
+        <div class="modal-content">
+
+            <div class="kg-modal-header">
+                <span id="span1">
+                    <i class="fas fa-diagnoses kg-icon rspacer"></i>XXX
+                </span>
+                <span id="closex" class="close">
+                    <i class="far fa-window-close"></i>
+                </span>
+            </div>
+
             <form id="prepform" X_currentQuestionId = "1" class="!container">
 
                 <!-- selects start here -->
@@ -196,9 +202,9 @@
                 <!-- inputs END here -->
 
                 <div class="group-on">
-                    <button id="backButton" type="button" onclick="showQuestion('back');" disabled>Back</button>
-                    <button id="nextButton" type="button" onclick="showQuestion('next');">Next</button>
-                    <button id="saveButton" type="button" onclick="hideCurrentQuestion(); savePrep(); showAppointment()">Save & close</button>
+                    <button id="backButton" type="button" onclick="showQuestion('back');" disabled><i class="fas fa-caret-square-left"></i></button>
+                    <button id="nextButton" type="button" onclick="showQuestion('next');"><i class="fas fa-caret-square-right"></i></button>
+                    <button id="saveButton" type="button" onclick="hideCurrentQuestion(); savePrep(); showAppointment()"><i class="fas fa-save rspacer"></i><i class="far fa-window-close"></i></button>
                 </div>
             </form>
         </div>

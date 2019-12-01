@@ -1,5 +1,7 @@
 
 * {
+  font-family: 'Muli', sans-serif; 
+  color: #123447;
   font-size: 13pt;
 }
 
@@ -11,9 +13,9 @@
   Form styles
 */
 .form-font {
-  font-family: 'Muli', sans-serif; 
+  font-family: inherit; 
   font-size: 1em;
-  color: #123447;
+  color: inherit;
   text-align: left;
 }
 
@@ -102,7 +104,7 @@ header{
   padding-left: .5em;
   padding-right: .5em;
   
-  border-radius: 5px;
+  border-radius: 2px;
 
 }
 subheader {
@@ -215,8 +217,8 @@ footer {
 
     height: 1.75em;
     border: 1px solid #7251A8;
-    border-radius: 5px;
-    min-width: 3em;
+    border-radius: 3px;
+    min-width: 1em;
 
   }
   button:hover {

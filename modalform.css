@@ -33,9 +33,11 @@
   
   /* The Close Button */
   .close {
-    color: #aaaaaa;
+    display: inline-block;
+    
+    color: inherit;
     float: right;
-    font-size: 28px;
+    -font-size: 28px;
     font-weight: bold;
   }
   
@@ -44,4 +46,26 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .kg-modal-header {
+    background-color: #FFE9B0;
+    
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    border-radius: 2px;
+
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+
+
   }
