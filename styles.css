@@ -3,15 +3,149 @@
   font-family: 'Muli', sans-serif; 
   color: #123447;
   font-size: 13pt;
+  background-color: #FFE9B0;
 }
 
-.kg-icon {
-  color: #3b47b5;
+.container{
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
 }
 
-/*
-  Form styles
-*/
+/********************************************************************************
+  APP HEADER DIV
+********************************************************************************/
+
+.hdr{
+  background-image: url("bg-pattern.png");
+  background-size: 35px;
+  background-color: #c58f00;
+  filter: contrast(200%) hue-rotate(0deg);
+  opacity: 2;
+  border-radius: 2px;
+}
+
+.hdr-container {
+  display: flex;
+  text-align: left;
+  -height: 52px;
+}
+
+.hdr-container > div {
+  flex: 1; /*grow*/
+  background-color: transparent;
+
+}
+.hdr-inner-div-left {
+  height: 1.5em; 
+  position:relative; 
+  margin-top: 7%;
+  text-align: left;
+  background-color: transparent;
+}
+
+.hdr-inner-div-mid {
+  height: 52px; 
+  position:relative; 
+  margin-top: 0%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.hdr-inner-div-right {
+  height: 52px; 
+  position:relative; 
+  margin-top: 0%;
+  text-align: right;
+  background-color: transparent;
+}
+
+.hdr-padding {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.hdr-hamburger {
+  font-size: 1.5em;
+  background-color: inherit;
+}
+
+.hdr-img {
+  width: 50px;
+  background-color: transparent;
+
+}
+
+/******************************************************************************************
+  PAGE TITLE BAR
+******************************************************************************************/
+
+.pgtitle {
+  display: flex;
+
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: .5em;
+  padding-bottom: .25em;
+  padding-left: .25em;
+  padding-right: .25em;
+}
+
+.pgtitle > div {
+  flex: 1, 1, fit-content; /*grow, shrink*/
+  background-color: transparent;
+}
+.pgtitle-inner-div-left {
+  position:relative;
+  width: 20%;
+  text-align: left;
+  background-color: transparent;
+}
+
+.pgtitle-inner-div-mid {
+  position:relative; 
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.pgtitle-inner-div-right {
+  position:relative; 
+  width: 20%;
+  text-align: right;
+  background-color: transparent;
+}
+
+.pgtitle-glyph {
+  font-size: 1.5em;
+  background-color: inherit;
+}
+
+
+
+/******************************************************************************************
+  PAGE STYLES
+******************************************************************************************/
+.pg-area {
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-left: .25em;
+  padding-right: .25em;
+}
+
+/******************************************************************************************
+  ???
+******************************************************************************************/
+.glyph {
+  font-size: 1.5em;
+  color: #123447;
+}
+
+/******************************************************************************************
+  FORM ELEMENTS
+******************************************************************************************/
 .form-font {
   font-family: inherit; 
   font-size: 1em;
@@ -22,7 +156,7 @@
 .form-input {
   display: inline-block;
   min-width: 75%;
-  background-color: #fff;
+  background-color: white;
   border: .5px solid lightblue;
   border-radius: 5px;
   
@@ -44,7 +178,6 @@
   padding-bottom: .5em;
   padding-left: .5em;
   padding-right: .5em;
-
 }
 
 .group {
@@ -60,7 +193,7 @@
 }
 
 .kg-centered {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 }
@@ -77,37 +210,17 @@
   padding-right: .5em;
   align-content: center;
 }
+
 .kg-intro {
-  font-family: 'Muli', sans-serif; 
+  font-family: 'Muli', sans-serif;
   font-size: 1em;
   color: #123447;
   text-align: center;
 }
 
 
-header{
-  background-image: url("bg-pattern.png");
-  background-size: 35px;
-  background-color: #c58f00;
-  filter: contrast(200%) hue-rotate(0deg);
 
-  opacity: 1;
-  font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 2em;
-  color: #123447;
-
-  text-align: center;
-  vertical-align: center;
-  
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
-  
-  border-radius: 2px;
-
-}
-subheader {
+.subheader {
   display: block;
   font-family: 'Muli', Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 1em;
@@ -120,16 +233,13 @@ subheader {
   margin-bottom: .5em;
 
 }
-.header-img {
-  width: 47px;
-  float: left;
-}
+
 
 
 /********************************************************************************
-  The log in page logo
+  The logo on index.html
 */
-.main-logo {
+.index-logo {
   display: block;
   font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 1.25em;
@@ -144,7 +254,7 @@ subheader {
 
 
 }
-.main-logo-img {
+.index-logo-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -157,33 +267,7 @@ subheader {
 
 
 
-footer {
-  -position: fixed;
-  left: 0;
-  bottom: 0;
-  background-color: #ffba00;
-  display: block;
-  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: .5em;
-  color: #123447;
-  text-align: center;
-  border-radius: 5px;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
-  margin-bottom: .5em;
-}
 
-.container{
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
-}
 
 .label{
   font-family: inherit;
@@ -232,21 +316,13 @@ footer {
 /*
 
 */
-.list-item {
-  display: inline-block;
-  min-width: 75%;
-  background-color: #fff;
-  font-family: 'Muli', Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 1em;
-  color: #123447;
-  height: 6em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
-}
+
 
 /* visited link */
+a {
+  color: #123447;
+  background-color: transparent;
+}
 a:visited {
   color: #123447;
 }
@@ -255,15 +331,97 @@ a:link {
 }
 a:hover {
   cursor:pointer;
+  color: #4e94b9;
  }
+
+i {
+  color: inherit;
+}
 
  .rspacer{
   padding-right: .5em;
  }
 
+/********************************************************************************
+  FOOTER
+*********************************************************************************/
+.footer {
+  -position: fixed;
+  margin-top: 90%;
+  left: 0;
+  bottom: 0;
+  background-color: #ffba00;
+  display: block;
+  font-family: inherit;
+  font-size: .75em;
+  color: #123447;
+  text-align: center;
+  border-radius: 5px;
+  /*
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-bottom: .5em;
+  */
+}
 
 
+/********************************************************************************
+  APPOINTMENT PAGE
+  "lineitem" is a 3 block table to separate 3 items in a single line
+*********************************************************************************/
+.list-item {
+  display: inline-block;
+  min-width: 75%;
+  background-color: inherit;
+  font-family: 'Muli', Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 1em;
+  color: #123447;
+  padding-top: 1em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+
+.lineitem {
+  display: flex;
+  line-height: 2em;
+}
+.lineitem> div {
+  flex: 1, 1, fit-content; /*grow, shrink*/
+  background-color: transparent;
+}
+.lineitem-inner-div-left {
+  position:relative;
+  width: 20%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.lineitem-inner-div-mid {
+  position:relative; 
+  width: 60%;
+  text-align: left;
+  background-color: transparent;
+}
+
+.lineitem-inner-div-right {
+  position:relative; 
+  width: 20%;
+  text-align: right;
+  background-color: transparent;
+}
+
+.lineitem-padding {
+  padding-top: 1em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
 
 @media only screen and (min-width: 768px) {
+
 
 }
