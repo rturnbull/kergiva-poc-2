@@ -1,0 +1,36 @@
+.tlbr{
+    background-color: lightgreen;
+  }
+  
+
+
+  .flex-grid {
+    width: 95%;
+    position: fixed;
+    bottom: 15px;
+    display: flex;
+    text-align: center;
+  }
+  .col {
+    flex: 1;
+    background-color: inherit;
+  }
+  .tlbr-label {
+      font-size: .6em;
+      background-color: inherit;
+  }
+
+  .tlbr-glyph {
+    background-color: inherit;
+  }
+
+  .tlbr-border {
+    
+    padding-top: .3em;
+    background-color:#f7dc94;  
+    -border-top-color: #989c9e;
+    -border-top-style: solid;
+    -border-top-width: 1px;
+  }
+
+

@@ -5,11 +5,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="modalform.css">
+        <link rel="stylesheet" href="toolbar.css">
         <link rel="stylesheet" href="responsive-grid.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        <script src="script.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Muli:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300&display=swap">
+        <script src="script.js"></script>
+        <script src="menu.js"></script>
+
     </head>
     
     
@@ -19,7 +24,7 @@
         <div class="hdr hdr-container hdr-padding">
             <div class="">
                 <div class="hdr-inner-div-left">
-                    <a onclick="alert('clicked')"><i class="fas fa-bars hdr-hamburger"></i></a>
+                    <a onclick="showMenu();"><i class="fas fa-bars hdr-hamburger"></i></a>
                 </div>
             </div>
             <div class="" >
@@ -27,14 +32,13 @@
                     <a href="index.html">
                             <img class="hdr-img" src="kergiva-logo-image&text-transparent.png" alt="" >
                     </a>
-                    
                 </div>
             </div>
             <div class=""></div>
         </div>
 
         <!--  PAGE TITLE BAR -->
-        <div class="pgtitle">
+        <div class="pgtitle ">
             <div class="pgtitle-inner-div-left">
             </div>
             <div class="pgtitle-inner-div-mid">
@@ -48,37 +52,81 @@
 
 
         <!-- APPOINTMENT LIST -->
-            <div class="hdr-container">
-                <ul>
-                    <li class="list-item">
-                        <a href="appointment.html">
-                            <span><img src="img/suzy.jpg" width="50"></span><br>
-                            <span><i class="fas fa-calendar-day kg-icon rspacer"></i> Sat 12/13/2019</span> <br>
-                            <span><i class="far fa-clock kg-icon  rspacer"></i>9:30 am</span><br>
-                            <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. Jay Patel</span>
-                        </a>   
-                        <hr>
-                    </li>
-                    <li class="list-item">            
-                        <span><img src="img/danny.jpeg" width="50"></span><br>
-                        <span><i class="fas fa-calendar-day kg-icon  rspacer"></i> Sat 12/13/2019</span> <br>
-                        <span><i class="far fa-clock kg-icon  rspacer"></i>11:00 am</span><br>
-                        <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. Gillian Johnson</span>
-                        <hr>
-                    </li>
-                    <li class="list-item">            
-                        <span><img src="img/danny.jpeg" width="50"></span><br>
-                        <span><i class="fas fa-calendar-day kg-icon  rspacer"></i> Sat 12/13/2019</span> <br>
-                        <span><i class="far fa-clock kg-icon  rspacer"></i>3:45 pm</span><br>
-                        <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. James Herriot</span>            
-                    </li>                  
-                </ul>
-            </div>
+        <div class="hdr-container">
+            <ul>
+                <li class="list-item">
+                    <a href="appointment.html">
+                        <span><img class="img-round" src="img/suzy.jpg" width="50"></span><br>
+                        <span><i class="fas fa-calendar-day kg-icon rspacer"></i> Sat 12/13/2019</span> <br>
+                        <span><i class="far fa-clock kg-icon  rspacer"></i>9:30 am</span><br>
+                        <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. Jay Patel</span>
+                    </a>   
+                    <hr>
+                </li>
+                <li class="list-item">            
+                    <span><img class="img-round" src="img/danny.jpeg" width="50"></span><br>
+                    <span><i class="fas fa-calendar-day kg-icon  rspacer"></i> Sat 12/13/2019</span> <br>
+                    <span><i class="far fa-clock kg-icon  rspacer"></i>11:00 am</span><br>
+                    <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. Gillian Johnson</span>
+                    <hr>
+                </li>
+                <li class="list-item">            
+                    <span><img class="img-round" src="img/danny.jpeg" width="50"></span><br>
+                    <span><i class="fas fa-calendar-day kg-icon  rspacer"></i> Sat 12/13/2019</span> <br>
+                    <span><i class="far fa-clock kg-icon  rspacer"></i>3:45 pm</span><br>
+                    <span><i class="fas fa-user-md kg-icon  rspacer"></i> Dr. James Herriot</span>            
+                </li>                  
+            </ul>
+        </div>
 
         <br>
         <div class="footer">
             This site and its contents (c)2019 rationalhealthcare.org. All rights reserved. 
         </div>
+
+   <!-- TOOLBAR begins here -->
+   <div style="height: 2em;"></div>
+   <div class="flex-grid tlbr-border">
+        <div class="col ">
+            <i class="fas fa-clipboard-list tlbr-glyph"></i>
+            <br><span class="tlbr-label">Appointments</span>
+        </div>
+        <div class="col ">A</div>
+        <div class="col ">B</div>
+        <div class="col ">C</div>
+        <div class="col ">
+            <i class="fas fa-ellipsis-v tlbr-glyph"></i>
+            <br><span class="tlbr-label">more</span>
+        </div>
+        
+    </div>
+   <!-- TOOLBAR ends here -->
+
+
+
+    <!-- MENU modal begins here -->
+    <div id="menuModal" class="menu-modal">
+            <div class="menu-modal-content">
+                
+                <div class="menu-header">
+                    <span class="menu-header">Menu</span> 
+                </div> 
+                <hr>
+                <div class="menu-item">
+                    <a class="menu-item-spacer" href="appointments.html">Appointments</a> <p></p>
+                    <a class="menu-item-spacer" href="profiles.html">Profiles</a>
+                    <hr>
+                    <a href="index.html">Log Out</a>
+                </div>                
+            </div>
+        </div>
+        <!-- MENU modal ends -->
+            
+
+
+
+
+
 
     </body>
 
