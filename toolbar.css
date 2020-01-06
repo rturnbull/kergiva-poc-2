@@ -1,9 +1,5 @@
-.tlbr{
-    background-color: lightgreen;
-  }
+
   
-
-
   .flex-grid {
     width: 95%;
     position: fixed;
@@ -24,13 +20,9 @@
     background-color: inherit;
   }
 
-  .tlbr-border {
-    
+  .tlbr-border {    
     padding-top: .3em;
-    background-color:#f7dc94;  
-    -border-top-color: #989c9e;
-    -border-top-style: solid;
-    -border-top-width: 1px;
+    background-color:#f7dc94;
   }
 
 

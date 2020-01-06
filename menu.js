@@ -8,19 +8,19 @@ function showMenu(){
 
     // Get the <span> element that closes the modal
     //var span = document.getElementById("closeMenux");
-    
+
     // When the user clicks on <span> (x), close the modal
-     //span.onclick = function() {
-        //menuModal.style.display = "none";
-     //}
+    //span.onclick = function() {
+    //menuModal.style.display = "none";
+    //}
 
-     // when user cicks menu, show the menu modal...
-     menuModal.style.display = "block";
+    // when user cicks menu, show the menu modal...
+    menuModal.style.display = "block";
 
-     window.onclick = function(e){
-        if(e.target == menuModal){
-            menuModal.style.display = "none"
-        }
-      }
+    window.onclick = function(e){
+    if(e.target == menuModal){
+        menuModal.style.display = "none"
+    }
+    }
 
 }

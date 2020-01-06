@@ -1,99 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Kērgiva</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="modalform.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300&display=swap" >
-        <script src="script.js"></script>
-        <script src="modalform.js"></script>
-    </head>
-    
-    <body class="">
+  <head>
+    <title>Kērgiva</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="modalform.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Muli:300&display=swap"
+    />
+    <script src="script.js"></script>
+    <script src="modalform.js"></script>
+  </head>
 
-
-        <!-- PAGE HEADER -->
-        <div class="hdr hdr-container hdr-padding">
-                <div class="">
-                    <div class="hdr-inner-div-left">
-                        <a onclick="alert('clicked')"><i class="fas fa-bars hdr-hamburger"></i></a>
-                    </div>
-                </div>
-                <div class="" >
-                    <div class="hdr-inner-div-mid">
-                        <a href="index.html">
-                            <img class="hdr-img" src="kergiva-logo-image&text-transparent.png" alt="" >
-                        </a>
-                        
-                    </div>
-                </div>
-                <div class=""></div>
-            </div>
-
-
-        <header class="kg-header" style="display: none;">
-            <a class="" href="index.html">
-                <img  class="kg-header-img" src="Color logo - no background.png" alt="Kērgiva" >
-            </a>
-            <!-- img href="index.html" class="kg-header-img container" src="Color logo - no background.png" alt="Kērgiva" -->
-        </header>
-
-        <span class="kg-text-container kg-intro">
-            Kērgiva is an app that helps patients get more from their visits to the doctor 
-            by giving them tools to retain information. It helps prepare before the visit, 
-            participate actively during the visit, and finally, digest, use and share
-            information after the visit.
-        </span>
-
-        <!-- Logo -->
-        <div class="!container index-logo">
-            <img class="index-logo-img" src="kergiva-logo-image&text-transparent.png" alt="" >    
+  <body class="">
+    <!-- PAGE HEADER -->
+    <div class="hdr hdr-container hdr-padding">
+      <div class="">
+        <div class="hdr-inner-div-left">
+          <a onclick="alert('clicked')"
+            ><i class="fas fa-bars hdr-hamburger"></i
+          ></a>
         </div>
-
-        <div class="group-on form-font kg-centered">
-            <button id="loginBtn" class="" type="button" onclick="showLoginModal()">Log in...</button>
+      </div>
+      <div class="">
+        <div class="hdr-inner-div-mid">
+          <a href="index.html">
+            <img
+              class="hdr-img"
+              src="kergiva-logo-image&text-transparent.png"
+              alt=""
+            />
+          </a>
         </div>
+      </div>
+      <div class=""></div>
+    </div>
 
+    <header class="kg-header" style="display: none;">
+      <a class="" href="index.html">
+        <img
+          class="kg-header-img"
+          src="Color logo - no background.png"
+          alt="Kērgiva"
+        />
+      </a>
+      <!-- img href="index.html" class="kg-header-img container" src="Color logo - no background.png" alt="Kērgiva" -->
+    </header>
 
+    <span class="kg-text-container kg-intro">
+      Kērgiva is the app that helps patients get more from their visits to the
+      doctor by giving them tools to retain and use information. It helps
+      prepare before the visit, participate actively during the visit, and
+      finally, digest, use and share information after the visit.
+    </span>
 
+    <!-- Logo -->
+    <div class="!container index-logo">
+      <img
+        class="index-logo-img"
+        src="kergiva-logo-image&text-transparent.png"
+        alt=""
+      />
+    </div>
 
+    <div class="group-on form-font kg-centered">
+      <button id="loginBtn" class="" type="button" onclick="showLoginModal()">
+        Log in...
+      </button>
+    </div>
 
-        <div id="login-form" class="modal">
-            <!-- Modal content -->
-            <form class="modal-content">
-                <div class="kg-modal-header">
-                        <i class="fas fa-user-check rspacer"></i>Log in to Kērgiva
-                    <span class="close"><i class="far fa-window-close"></i></span><br>
-                </div>
-                
-                <div class="group-on">
-                    <label>Email Address</label>
-                    <input class="form-font form-input-text" placeholder="Email address">
-                    <p></p>
-                    <label>Password</label>
-                    <input class="form-font form-input-text"  placeholder="Password">
-                    <p></p>
-                    <button id="login-btn" type="button"><i class="fas fa-sign-in-alt"></i></button>    
-                </div>
+    <!-- Modal window starts here-->
+    <div id="login-form" class="modal">
+      <!-- Modal content -->
+      <form class="modal-content">
+        <!-- Modal page header begins... -->
+        <div class="modal-hdr modal-hdr-padding">
+          <table class="hdr-tbl">
+            <tr class="hdr-background-color">
+              <td class="hdr-td-left">
+                <i class="fas fa-user-check modal-hdr-glyph"></i>
+              </td>
+              <td class="hdr-td-mid">Log in to Kērgiva</td>
+              <td class="hdr-td-right">
+                <span class="close hdr-background-color"
+                  ><i class="far fa-window-close modal-hdr-glyph"></i
+                ></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- Modal page header ends -->
 
-            </form>
-          </div>
+        <div class="group-on">
+          <label>Email Address</label>
+          <input
+            class="form-font form-input-text"
+            placeholder="Email address"
+          />
+          <p></p>
+          <label>Password</label>
+          <input class="form-font form-input-text" placeholder="Password" />
+          <p></p>
+          <button id="login-btn" type="button">Log In</button>
+        </div>
+      </form>
+    </div>
+    <!-- Modal window ends here-->
 
-        
-
-
-
-
-        <br>
-          <footer>
-            This site and its contents (c) 2019 rationalhealthcare.org. All rights reserved. 
-        </footer>
-    </body>
-    
+    <br />
+    <footer>
+      This site and its contents (c) 2019 rationalhealthcare.org. All rights
+      reserved.
+    </footer>
+  </body>
 </html>
-
